@@ -8,10 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ['var(--font-poppins)'],
+        nunito: ['var(--font-nunito)'],
+        space_grotesk: ['var(--font-space-grotesk)'],
+      },
       colors: {
+        "neon-white": "#FBFEFD",
         flavescent: "#FBED96",
         "magic-mint": "#ABECD6",
         "mint-cream": "#EFFFFA",
+        "deep-sky-blue": "#40C4FF",
+        "celestial-blue": "#189FFF",
       },
       boxShadow: {
         avatar: "0px 25px 50px -12px rgba(182, 237, 207, 0.40)",
