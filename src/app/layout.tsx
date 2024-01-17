@@ -10,7 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body
-        className={`antialiased bg-neon-white flex justify-center text-gray-900 my-10 ${poppins.className}`}>
+        className={`antialiased bg-neon-white flex justify-center my-10 ${poppins.className}`}>
         {children}
       </body>
     </html>

@@ -1,8 +1,9 @@
 import Image from "next/image";
 import avatar from "@/_assets/avatar.png";
 import vector from "@/_assets/vector.svg";
-import { Terminal, AlignRight, MoveRight } from "lucide-react";
+import { Terminal, AlignRight, MoveRight, MoveLeft } from "lucide-react";
 import { nunito, space_grotesk } from "./fonts";
+import { ProjectCard } from "@/_components/ProjectCard";
 
 export default function Home() {
   return (
@@ -34,7 +35,7 @@ export default function Home() {
           />
         </div>
         <div className="text-6xl font-medium text-center leading-[71px] mb-11 max-w-[840px]">
-        Desenvolvo{" "}
+          Desenvolvo{" "}
           <div className="relative z-10 w-fit inline-block">
             <span className="relative z-10 bg-gradient-to-r from-deep-sky-blue to-celestial-blue bg-clip-text text-transparent">
               ideias{" "}
@@ -62,6 +63,15 @@ export default function Home() {
         <span className="block">Ultimos </span>
         <span className="block">Projetos</span>
       </h1>
+      <div className="flex justify-between mb-14">
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+      </div>
+      <div className="flex justify-end gap-4">
+        <button className="bg-amber-500 p-3 rounded-full hover:bg-amber-400"><MoveLeft color="#FFFFFF" size={40} /></button>
+        <button className="bg-amber-500 p-3 rounded-full hover:bg-amber-400"><MoveRight color="#FFFFFF" size={40} /></button>
+      </div>
     </main>
   );
 }
