@@ -1,17 +1,14 @@
 import Image from "next/image";
-import avatar from "@/_assets/avatar.png";
-import vector from "@/_assets/vector.svg";
-import vector_about from "@/_assets/vector-about.svg"
-import avatar_about from "@/_assets/avatar-about.png"
-import decoration from "@/_assets/decoration.svg"
+import { avatar, avatar_about, decoration, ilustration, linkedin, vector, vector_about } from "@/_helpers/imports"
 import { Terminal, AlignRight, MoveRight, MoveLeft } from "lucide-react";
-import { nunito, space_grotesk } from "./fonts";
+import { nunito, space_grotesk } from "../_styles/fonts";
 import { ProjectCard } from "@/_components/ProjectCard";
 import { SkillCard } from "@/_components/SkillCard";
+import { ClipboardCopy } from "@/_components/ClipboardButton";
 
 export default function Home() {
   return (
-    <main className="w-full max-w-screen-xl">
+    <main className="w-full max-w-screen-xl flex flex-col">
       {/* Header */}
       <header className="w-full flex start items-center justify-between">
         <div className="flex items-center gap-2">
@@ -83,23 +80,42 @@ export default function Home() {
           <Image src={vector_about} alt="Vector About" className="w-full absolute z-0 inset-x-0 -bottom-4" />
         </div>
       </div>
-      <div className="flex gap-5 items-center justify-between mb-20">
+      <div className="flex gap-36 items-center justify-between mb-20">
         <div className="flex flex-col justify-between">
           <div className="flex items-center gap-5 mb-12">
             <Image src={decoration} alt="Decoration" className="h-full" />
-            <p className=" font-nunito font-normal text-2xl leading-[60px]">Com 19 anos, apaixonado por tecnologia, sou um programador full stack dedicado à criação de projetos inovadores. Minha jornada reflete a busca incessante por conhecimento e a paixão pela programação.</p>
+            <p className="font-nunito font-normal text-2xl leading-normal">Tenho 19 anos, e sempre fui apaixonado por tecnologia e em desenvolver soluções para problemas difíceis.<br /> <br />Futuro cientista da computação e atual desenvolvedor fullstack!</p>
           </div>
           <div>
             <h2 className="text-5xl font-medium mb-8">Skills</h2>
             <div className="flex justify-between items-center">
-              <SkillCard imageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/640px-React-icon.svg.png" skillName="React" />
-              <SkillCard imageSource="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png" skillName="Node.js" />
-              <SkillCard imageSource="https://cdn-icons-png.flaticon.com/512/5968/5968342.png" skillName="PostgreSQL" />
+              <SkillCard imageSource="https://icon.icepanel.io/Technology/svg/React.svg" skillName="React" />
+              <SkillCard imageSource="https://icon.icepanel.io/Technology/svg/Node.js.svg" skillName="Node.js" />
+              <SkillCard imageSource="https://icon.icepanel.io/Technology/svg/PostgresSQL.svg" skillName="PostgreSQL" />
             </div>
           </div>
         </div>
         <Image src={avatar_about} alt="Avatar About" className="h-fit" />
       </div>
+      {/* Footer */}
+      <footer className="w-screen bg-gray-900 self-center flex flex-col items-center rounded-t-[48px]">
+        <div className="max-w-screen-xl h-[452px] flex justify-between items-center mt-20 mb-16">
+          <div className="flex flex-col gap-2">
+            <h2 className="text-[92px] font-medium text-white leading-[82px]">Tem alguma ideia?</h2>
+            <p className="text-2xl font-normal text-white mb-6 w-72">Vamos construí-la juntos!</p>
+            <ClipboardCopy copyText="levibaraujo80@gmail.com" />
+            <a href="https://www.linkedin.com/in/levi-barreto-ara%C3%BAjo/" target="_blank">
+              <Image src={linkedin} alt="Linkedin" className="hover:brightness-110" />
+            </a>
+          </div>
+          <Image src={ilustration} alt="Ilustração" title="Designed by rawpixel.com" className="w-[500px] h-[452px] object-cover object-center rounded-2xl" />
+        </div>
+        <div className="mb-7">
+          <span className="text-base font-light text-white">Design inspiration from</span>
+          <a href="https://www.figma.com/community/file/1126581136185110141/web-developer-portfolio-personal-site"
+            target="_blank" className="text-lg font-light text-amber-500 "> Rafael Jr. Porfolio Design</a>
+        </div>
+      </footer>
     </main>
   );
 }

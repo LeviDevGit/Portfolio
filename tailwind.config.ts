@@ -24,7 +24,8 @@ const config: Config = {
       },
       boxShadow: {
         avatar: "0px 25px 50px -12px rgba(182, 237, 207, 0.40)",
-        card: "0px 23px 30px 0px rgba(171, 236, 214, 0.20), 0px 4px 12px 0px rgba(0, 0, 0, 0.10)"
+        card: "0px 23px 30px 0px rgba(171, 236, 214, 0.20), 0px 4px 12px 0px rgba(0, 0, 0, 0.10)",
+        skill: "5px 5px 100px rgba(227, 242, 238), -5px -5px 100px rgba(251, 255, 255);"
       }
     },
   },

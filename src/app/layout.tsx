@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import { poppins } from "./fonts";
+import "../_styles/globals.css";
+import { poppins } from "../_styles/fonts";
 
 export const metadata: Metadata = {
   title: "Levi Portfolio",
@@ -10,7 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body
-        className={`antialiased bg-neon-white flex justify-center my-10 ${poppins.className}`}>
+        className={`antialiased bg-neon-white flex justify-center mt-10 ${poppins.className}`}>
         {children}
       </body>
     </html>
