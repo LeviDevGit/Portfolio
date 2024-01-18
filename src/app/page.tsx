@@ -1,9 +1,13 @@
 import Image from "next/image";
 import avatar from "@/_assets/avatar.png";
 import vector from "@/_assets/vector.svg";
+import vector_about from "@/_assets/vector-about.svg"
+import avatar_about from "@/_assets/avatar-about.png"
+import decoration from "@/_assets/decoration.svg"
 import { Terminal, AlignRight, MoveRight, MoveLeft } from "lucide-react";
 import { nunito, space_grotesk } from "./fonts";
 import { ProjectCard } from "@/_components/ProjectCard";
+import { SkillCard } from "@/_components/SkillCard";
 
 export default function Home() {
   return (
@@ -68,9 +72,33 @@ export default function Home() {
         <ProjectCard />
         <ProjectCard />
       </div>
-      <div className="flex justify-end gap-4">
+      <div className="flex justify-end gap-4 mb-16">
         <button className="bg-amber-500 p-3 rounded-full hover:bg-amber-400"><MoveLeft color="#FFFFFF" size={40} /></button>
         <button className="bg-amber-500 p-3 rounded-full hover:bg-amber-400"><MoveRight color="#FFFFFF" size={40} /></button>
+      </div>
+      <div className="text-left text-8xl font-medium leading-[82px] mb-10">
+        Sobre
+        <div className="relative z-10 w-fit pr-9">
+          <span className="block relative z-10">mim</span>
+          <Image src={vector_about} alt="Vector About" className="w-full absolute z-0 inset-x-0 -bottom-4" />
+        </div>
+      </div>
+      <div className="flex gap-5 items-center justify-between mb-20">
+        <div className="flex flex-col justify-between">
+          <div className="flex items-center gap-5 mb-12">
+            <Image src={decoration} alt="Decoration" className="h-full" />
+            <p className=" font-nunito font-normal text-2xl leading-[60px]">Com 19 anos, apaixonado por tecnologia, sou um programador full stack dedicado à criação de projetos inovadores. Minha jornada reflete a busca incessante por conhecimento e a paixão pela programação.</p>
+          </div>
+          <div>
+            <h2 className="text-5xl font-medium mb-8">Skills</h2>
+            <div className="flex justify-between items-center">
+              <SkillCard imageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/640px-React-icon.svg.png" skillName="React" />
+              <SkillCard imageSource="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png" skillName="Node.js" />
+              <SkillCard imageSource="https://cdn-icons-png.flaticon.com/512/5968/5968342.png" skillName="PostgreSQL" />
+            </div>
+          </div>
+        </div>
+        <Image src={avatar_about} alt="Avatar About" className="h-fit" />
       </div>
     </main>
   );
