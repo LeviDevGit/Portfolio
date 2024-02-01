@@ -1,20 +1,21 @@
-"use client"
+'use client'
 
-import { useState } from "react";
+import { useState } from 'react'
+import { Element } from 'react-scroll'
 
 interface ClipboardCopyProps {
-  copyText: string;
+  copyText: string
 }
 
 export function ClipboardCopy({ copyText }: ClipboardCopyProps) {
-  const [isCopied, setIsCopied] = useState(false);
+  const [isCopied, setIsCopied] = useState(false)
 
   // This is the function we wrote earlier
   async function copyTextToClipboard(text: string) {
     if ('clipboard' in navigator) {
-      return await navigator.clipboard.writeText(text);
+      return await navigator.clipboard.writeText(text)
     } else {
-      return document.execCommand('copy', true, text);
+      return document.execCommand('copy', true, text)
     }
   }
 
@@ -24,21 +25,26 @@ export function ClipboardCopy({ copyText }: ClipboardCopyProps) {
     copyTextToClipboard(copyText)
       .then(() => {
         // If successful, update the isCopied state value
-        setIsCopied(true);
+        setIsCopied(true)
         setTimeout(() => {
-          setIsCopied(false);
-        }, 1500);
+          setIsCopied(false)
+        }, 1500)
       })
       .catch((err) => {
-        console.log(err);
-      });
+        console.log(err)
+      })
   }
 
   return (
-    <div>
-      <button onClick={handleCopyClick} className="text-2xl font-normal text-white mb-6 border-b-2">
-        {isCopied ? 'Copied!' : 'levibaraujo80@gmail.com'}
-      </button>
-    </div>
-  );
+    <Element name="myScrollToElement">
+      <div>
+        <button
+          onClick={handleCopyClick}
+          className="mb-6 border-b-2 text-2xl font-normal text-white"
+        >
+          {isCopied ? 'Copied!' : 'levibaraujo80@gmail.com'}
+        </button>
+      </div>
+    </Element>
+  )
 }

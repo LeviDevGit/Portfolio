@@ -5,10 +5,8 @@ interface ProjectTechProps {
 
 export function ProjectTech({ techName, techColor }: ProjectTechProps) {
   return (
-    <div className={`w-fit px-4 py-2 rounded-[32px] text-white ${techColor}`}>
-      <span>
-        {techName}
-      </span >
-    </div >
+    <div className={`w-fit rounded-[32px] px-4 py-2 text-white ${techColor}`}>
+      <span>{techName}</span>
+    </div>
   )
 }
