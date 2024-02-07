@@ -26,9 +26,9 @@ export function ProjectCard({
   techBackground = 'bg-eerie-black',
 }: ProjectCardProps) {
   return (
-    <div className="flex flex-col gap-5">
+    <li className="w-1/3 flex-shrink-0 flex-col gap-5 mobile:w-full">
       <h2 className="text-4xl font-medium">{techName}</h2>
-      <div className="flex gap-3">
+      <div className="mt-3 flex gap-3">
         {techProps &&
           techProps.map((e, index) => (
             <ProjectTech
@@ -38,22 +38,24 @@ export function ProjectCard({
             />
           ))}
       </div>
-      <div className={`w-fit rounded-[18px] ${techBackground}`}>
+      <div
+        className={`mt-5 h-[213px] w-[353px] w-fit rounded-[18px] px-3.5 py-8 ${techBackground} mobile:h-full mobile:w-full`}
+      >
         {techName === 'Kenzie Hub' ? (
           <Image
             src={KenzieHubPrint}
             alt="ProjectPrint"
-            className="mx-4 my-7 h-[213px] w-[353px]"
+            className="h-full w-full"
           />
         ) : (
           <img
             src="https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2020/06/github.jpg"
             alt=" ProjectPrint"
-            className="mx-5 my-6 h-[213px] w-[353px]"
+            className="h-full w-full"
           />
         )}
       </div>
-      <div className="flex gap-5">
+      <div className="mt-5 flex gap-5">
         {techGithub && (
           <a href={techLink} target="_blank" className="flex gap-1 text-base">
             Github <Github color="#000000" />{' '}
@@ -65,6 +67,6 @@ export function ProjectCard({
           </a>
         )}
       </div>
-    </div>
+    </li>
   )
 }

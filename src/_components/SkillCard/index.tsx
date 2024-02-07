@@ -9,7 +9,9 @@ export function SkillCard({ imageSource, skillName }: SkillCardProps) {
       <div className="flex h-36 w-36 items-center justify-center rounded-[41px] shadow-skill">
         <img src={imageSource} className="w-[90px]" />
       </div>
-      <span className="text-[28px] font-medium">{skillName}</span>
+      <span className="text-[28px] font-medium mobile:text-xl">
+        {skillName}
+      </span>
     </div>
   )
 }

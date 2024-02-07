@@ -40,7 +40,7 @@ export function ClipboardCopy({ copyText }: ClipboardCopyProps) {
       <div>
         <button
           onClick={handleCopyClick}
-          className="mb-6 border-b-2 text-2xl font-normal text-white"
+          className="mb-6 border-b-2 text-2xl font-normal text-white mobile:text-xl"
         >
           {isCopied ? 'Copied!' : 'levibaraujo80@gmail.com'}
         </button>
