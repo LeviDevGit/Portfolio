@@ -1,3 +1,4 @@
+// eslint-disable-next-line camelcase
 import { Poppins, Nunito, Space_Grotesk } from 'next/font/google'
 
 export const poppins = Poppins({

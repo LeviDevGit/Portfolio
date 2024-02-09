@@ -19,11 +19,11 @@ export function AboutMeSection() {
           />
         </div>
       </div>
-      <div className="mb-20 flex items-center justify-between gap-36 mobile:flex-col">
+      <div className="mb-20 flex items-center justify-between gap-36">
         <div className="flex flex-col justify-between">
           <div className="mb-12 flex items-center gap-5">
             <Image src={decoration} alt="Decoration" className="h-full" />
-            <p className="font-nunito text-2xl font-normal leading-normal">
+            <p className="font-nunito text-2xl font-normal leading-normal mobile:text-lg">
               Tenho 19 anos, e sempre fui apaixonado por tecnologia e em
               desenvolver soluções para problemas difíceis.
               <br /> <br />
@@ -34,20 +34,20 @@ export function AboutMeSection() {
             <h2 className="mb-8 text-5xl font-medium mobile:text-4xl">
               Skills
             </h2>
-            <div className="flex items-center justify-between">
-              <SkillCard
-                imageSource="https://icon.icepanel.io/Technology/svg/React.svg"
-                skillName="React"
-              />
-              <SkillCard
-                imageSource="https://icon.icepanel.io/Technology/svg/Node.js.svg"
-                skillName="Node.js"
-              />
-              <SkillCard
-                imageSource="https://icon.icepanel.io/Technology/svg/PostgresSQL.svg"
-                skillName="PostgreSQL"
-              />
-            </div>
+            <ul className="flex items-center justify-between">
+              <SkillCard.Root>
+                <SkillCard.Image source="https://icon.icepanel.io/Technology/svg/React.svg" />
+                <SkillCard.Name name="React" />
+              </SkillCard.Root>
+              <SkillCard.Root>
+                <SkillCard.Image source="https://icon.icepanel.io/Technology/svg/Node.js.svg" />
+                <SkillCard.Name name="Node.js" />
+              </SkillCard.Root>
+              <SkillCard.Root>
+                <SkillCard.Image source="https://icon.icepanel.io/Technology/svg/PostgresSQL.svg" />
+                <SkillCard.Name name="PostgreSQL" />
+              </SkillCard.Root>
+            </ul>
           </div>
         </div>
         <Image

@@ -5,6 +5,16 @@ const config: Config = {
     './src/_components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    'bg-sky-400',
+    'bg-rose-500',
+    'bg-wild-watermelon',
+    'bg-emerald-400',
+    'bg-amber-500',
+    'bg-gray-900',
+    'bg-dark-charcoal',
+    'animate-shake',
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -22,6 +32,7 @@ const config: Config = {
         white: '#FFFFFF',
         'eerie-black': '#121214',
         'wild-watermelon': '#FF577F',
+        'dark-charcoal': '#313131',
       },
       boxShadow: {
         avatar: '0px 25px 50px -12px rgba(182, 237, 207, 0.40)',
@@ -36,6 +47,25 @@ const config: Config = {
       screens: {
         // eslint-disable-next-line prettier/prettier
         'mobile': { 'max': '1328px' },
+      },
+      animation: {
+        shake: 'shake 0.82s cubic-bezier(.36,.07,.19,.97) both',
+      },
+      keyframes: {
+        shake: {
+          '10%, 90%': {
+            transform: 'translate3d(-1px, 0, 0)',
+          },
+          '20%, 80%': {
+            transform: 'translate3d(2px, 0, 0)',
+          },
+          '30%, 50%, 70%': {
+            transform: 'translate3d(-4px, 0, 0)',
+          },
+          '40%, 60%': {
+            transform: 'translate3d(4px, 0, 0)',
+          },
+        },
       },
     },
   },

@@ -2,7 +2,7 @@
 
 import { AlignRight } from 'lucide-react'
 import { useState } from 'react'
-import { IndexModal } from '../IndexModal'
+import { IndexModal } from './IndexModal'
 
 interface ModalToggleProps {
   projectAboutMeButton: () => void

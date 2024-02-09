@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "name": "Kenzie Hub",
+      "techs": [
+        {
+          "name": "React",
+          "color": "bg-sky-400"
+        },
+        {
+          "name":"Rest API" ,
+          "color":"bg-rose-500"
+        }
+      ],
+      "link": {
+        "host": "",
+        "deploy": "https://react-entrega-kenzie-hub-levi-git-h.vercel.app/"
+      },
+      "background": "bg-wild-watermelon"
+    },
+    {
+      "name": "KIm-veis",
+      "techs": [
+        {
+          "name": "Node.js",
+          "color": "bg-emerald-400"
+        },
+        {
+         "name":"SQLite3" ,
+         "color":"bg-amber-500"
+        },
+        {
+          "name":"Jest", 
+          "color":"bg-gray-900"
+        }
+      ],
+      "link": {
+        "host": "https://github.com/Kenzie-Academy-Brasil-Developers/KIm-veis",
+        "deploy": ""
+      },
+      "background": "bg-dark-charcoal"
+    }
+  ]
+}

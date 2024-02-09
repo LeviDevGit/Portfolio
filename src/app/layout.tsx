@@ -13,6 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <link rel="icon" href="/favicon.ico" sizes="any" />
       <body
         className={`mt-10 flex justify-center bg-neon-white antialiased ${poppins.className}`}
       >
