@@ -16,7 +16,7 @@ export function SplashCardSection() {
         <p
           className={`${nunito.className} text-5xl font-semibold -tracking-[2.64px] mobile:text-2xl`}
         >
-          Olá, eu o meu nome é Levi
+          Olá, o meu nome é Levi
         </p>
         <img
           src="https://emojigraph.org/media/apple/call-me-hand-light-skin-tone_1f919-1f3fb.png"
