@@ -5,6 +5,7 @@ import avatarAbout from '@/_assets/avatar-about.png'
 import decoration from '@/_assets/decoration.svg'
 import ilustration from '@/_assets/ilustration.jpg'
 import linkedin from '@/_assets/linkedin.png'
+import github from '@/_assets/github.png'
 
 export {
   avatar,
@@ -14,4 +15,5 @@ export {
   linkedin,
   vector,
   vectorAbout,
+  github,
 }

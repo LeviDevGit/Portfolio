@@ -1,6 +1,6 @@
 import { ClipboardCopy } from '@/_components/ClipboardButton'
 import Image from 'next/image'
-import { ilustration, linkedin } from '@/_helpers/imports'
+import { ilustration, linkedin, github } from '@/_helpers/imports'
 
 export function Footer() {
   return (
@@ -14,16 +14,25 @@ export function Footer() {
             Vamos construí-la juntos!
           </p>
           <ClipboardCopy copyText="levibaraujo80@gmail.com" />
-          <a
-            href="https://www.linkedin.com/in/levi-barreto-ara%C3%BAjo/"
-            target="_blank"
-          >
-            <Image
-              src={linkedin}
-              alt="Linkedin"
-              className="hover:brightness-110"
-            />
-          </a>
+          <div className="flex gap-4">
+            <a
+              href="https://www.linkedin.com/in/levi-barreto-ara%C3%BAjo/"
+              target="_blank"
+            >
+              <Image
+                src={linkedin}
+                alt="Linkedin"
+                className="h-[66px] w-[66px] rounded-lg hover:brightness-110"
+              />
+            </a>
+            <a href="https://github.com/LeviDevGit" target="_blank">
+              <Image
+                src={github}
+                alt="Github"
+                className="h-[66px] w-[66px] rounded-lg hover:brightness-110"
+              />
+            </a>
+          </div>
         </div>
         <Image
           src={ilustration}
